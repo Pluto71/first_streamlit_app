@@ -38,7 +38,8 @@ import snowflake.connector
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 
-add_my_fruit = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index), ['cherry'])
+all_da_fruits = my_cur.execute("SELECT * from fruit_load_list").fetchall()
+add_my_fruit = streamlit.multiselect("Pick some fruits:", list(all_da_fruits), ['cherry'])
 
 my_cur.execute("SELECT * from fruit_load_list WHERE FRUIT_NAME =" + add_my_fruit)
 my_data_rows = my_cur.fetchall()
