@@ -38,10 +38,10 @@ import snowflake.connector
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 
-all_da_fruits = my_cur.execute("SELECT * from fruit_load_list").fetchall()
-add_my_fruit = streamlit.multiselect("Pick some fruits:", list(all_da_fruits), ['cherry'])
+# all_da_fruits = my_cur.execute("SELECT * from fruit_load_list").fetchall()
+# add_my_fruit = streamlit.multiselect("Pick some fruits:", list(all_da_fruits), ['cherry'])
 
-my_cur.execute("SELECT * from fruit_load_list WHERE FRUIT_NAME =" + add_my_fruit)
+my_cur.execute("SELECT * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit_load_list contains:")
 streamlit.dataframe(my_data_rows)
