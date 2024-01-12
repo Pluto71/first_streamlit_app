@@ -21,4 +21,9 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 st.dataframe(fruits_to_show)
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response.json())
+
+st.header("Fruityvice Fruit Advice!")
+# Normalize json response 
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+# Format normalized json data into readable dataframe
+st.dataframe(fruityvice_normalized)
