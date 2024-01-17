@@ -40,8 +40,8 @@ my_cur = my_cnx.cursor()
 
 all_da_fruits = my_cur.execute("SELECT * from fruit_load_list").fetchall()
 # add_my_fruit = streamlit.multiselect("Pick some fruits:", list(all_da_fruits))
-streamlit.text('all_da_fruits: ' + all_da_fruits)
-# streamlit.text('add_my_fruit: ' + add_my_fruit)
+streamlit.text('all_da_fruits:')
+streamlit.text(all_da_fruits)
 
 my_cur.execute("SELECT * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
