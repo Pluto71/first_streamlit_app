@@ -37,8 +37,6 @@ try:
     streamlit.dataframe(get_fv_data)
 except URLError as e:
   streamlit.error()
-# Pause this for troubleshooting
-streamlit.stop()
 
 streamlit.header("The fruit_load_list contains:")
 # Snowflake-related functions
