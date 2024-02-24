@@ -4,6 +4,9 @@ import requests
 import snowflake.connector
 from urllib.error import URLError
 
+st.markdown("# Main page 🎈")
+st.sidebar.markdown("# Main page 🎈")
+
 streamlit.title('Some Title')
 
 streamlit.header('Proverbs 25:2')
