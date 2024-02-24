@@ -12,3 +12,5 @@ streamlit.text('  to search out a matter is the glory of kings. 👑')
 
 streamlit.header('Dothan')
 streamlit.text('"Those who are with us are more than those who are with them."')
+
+streamlit.header('Hero\'s duty')
