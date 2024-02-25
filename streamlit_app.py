@@ -4,8 +4,8 @@ import requests
 import snowflake.connector
 from urllib.error import URLError
 
-st.markdown("# Separate page 🎈")
-st.sidebar.markdown("# Separate page 🎈")
+streamlit.markdown("# Separate page 🎈")
+streamlit.sidebar.markdown("# Separate page 🎈")
 
 streamlit.title('Some Title')
 
